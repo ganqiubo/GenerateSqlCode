@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!--<extension point="org.eclipse.ui.popupMenus">  
+        <objectContribution id="Clarity.objectContribution"  
+            objectClass="org.eclipse.core.runtime.IAdaptable">  
+            <menu   
+                label="Source"  
+                id="Source">   
+            <separator name="conf"> </separator>   
+            </menu>   
+              
+            <menu   
+                label="配置文件编辑"  
+                path="Source/conf"  
+                id="ConfFileEditor">
+            <separator   
+                name="additions">   
+            </separator>   
+            </menu>  
+              
+            <action   
+                label="表一览"  
+                class="com.linkstec.qsp.plugin.menu.TableListGetter"  
+                menubarPath="Source/additions"  
+                id="com.linkstec.qsp.plugin.menu.TableListGetter">   
+            </action>  
+              
+            <action   
+                label="Bean一览"  
+                class="com.linkstec.qsp.plugin.menu.BeanListGetter"  
+                menubarPath="Source/additions"  
+                id="com.linkstec.qsp.plugin.menu.BeanListGetter">   
+            </action>  
+       
+              
+            <action   
+                label="db.property文件配置"  
+                class="com.linkstec.qsp.plugin.menu.ConfFileEditor"  
+                menubarPath="Source/ConfFileEditor/additions"  
+                id="com.linkstec.qsp.plugin.menu.dbProperty">   
+            </action>  
+            <action
+                label="plugin文件配置"  
+                class="com.linkstec.qsp.plugin.menu.ConfFileEditor"  
+                menubarPath="Source/ConfFileEditor/additions"  
+                id="com.linkstec.qsp.plugin.menu.plugin">   
+            </action>  
+        </objectContribution>  
+    </extension>-->
+    
+    <extension point="org.eclipse.ui.popupMenus">  
+        <objectContribution id="com.popmenu.extend.GenerateCode"  
+            objectClass="org.eclipse.jdt.core.IJavaElement"
+            nameFilter="*.java">  
+            <menu   
+                label="generate SQL code"  
+                id="GenerateCode">   
+            <separator name="conf"> </separator>   
+            </menu>
+              
+            <action   
+                label="Generate SetBySql"  
+                class="com.plug.actions.GenerateSetBySql" 
+                menubarPath="GenerateCode/additions"
+                id="com.plug.actions.GenerateSetBySql">
+            </action>  
+        </objectContribution>  
+    </extension>
+
+</plugin>

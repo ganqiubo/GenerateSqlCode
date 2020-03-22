@@ -1,5 +1,4 @@
 package com.plug.actions;
-import java.sql.ResultSet;
 import java.util.HashMap;
 
 import org.eclipse.jdt.core.IBuffer;
@@ -20,6 +19,7 @@ public class GenerateSetBySql implements IActionDelegate{
 		put("I", "Int");
 		put("QString;", "String");
 		put("QResultSet;", "String");
+		put("L", "Long");//----------
 	}};
 
 	@Override
